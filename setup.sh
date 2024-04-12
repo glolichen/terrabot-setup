@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install dphys-swapfile`
+sudo apt -y install dphys-swapfile`
 sudo echo "CONF_SWAPFILE=/var/swap" | /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
@@ -7,18 +7,18 @@ sudo dphys-swapfile swapon
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
-sudo apt update
-sudo apt upgrade
-sudo apt install python3 python3-pip git
-sudo apt install python-is-python3
-sudo apt install vlc
+sudo apt -y update
+sudo apt -y upgrade
+sudo apt -y install python3 python3-pip git
+sudo apt -y install python-is-python3
+sudo apt -y install vlc
 pip install matplotlib tmux transitions scikit-learn opencv-python
 
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt install curl
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-sudo apt install build-essential arduino arduino-mk
-sudo apt install ros-noetic-rosserial ros-noetic-rosserial-arduino
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt -y/sources.list.d/ros-latest.list'
+sudo apt -y install curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt -y-key add -
+sudo apt -y install build-essential arduino arduino-mk
+sudo apt -y install ros-noetic-rosserial ros-noetic-rosserial-arduino
 echo "source /opt/ros/noetic/setup.bash" | ~/.bashrc
 
 cd Desktop
