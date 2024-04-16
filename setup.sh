@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt -y install dphys-swapfile
-sudo echo "CONF_SWAPFILE=/var/swap" | /etc/dphys-swapfile
+sudo echo "CONF_SWAPFILE=/var/swap" >> /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
 
@@ -27,9 +27,9 @@ cd Desktop/
 git clone https://github.com/reidgs/TerraBot
 cd $HOME
 ln -s Desktop/TerraBot .
-echo "source /opt/ros/noetic/setup.bash" | ~/.bashrc
-echo "export TB_DIR=${HOME}/Desktop/TerraBot" | ~/.bashrc
-echo "export export PYTHONPATH=${PYTHONPATH}:${TB_DIR}:${TB_DIR}/lib/:${TB_DIR}:${TB_DIR}/agents/" | ~/.bashrc
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+echo "export TB_DIR=${HOME}/Desktop/TerraBot" >> ~/.bashrc
+echo "export export PYTHONPATH=${PYTHONPATH}:${TB_DIR}:${TB_DIR}/lib/:${TB_DIR}:${TB_DIR}/agents/" >> ~/.bashrc
 source ~/.bashrc
 
 ln -s Desktop/TerraBot .
