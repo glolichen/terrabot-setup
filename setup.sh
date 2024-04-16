@@ -47,7 +47,7 @@ sudo usermod -a -G dialout robotanist
 cd $HOME
 mkdir arduino-cli/
 mkdir arduino-cli/bin/
-curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh >> BINDIR=~/arduino-cli/bin/ sh
+curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/arduino-cli/bin/ sh
 echo "export PATH=$PATH:/home/robotanist:/home/robotanist/.local/bin/:/root/.local/bin/:/home/robotanist/arduino-cli/bin/" >> ~/.bashrc
 source ~/.bashrc
 
