@@ -11,8 +11,8 @@ sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install python3 python3-pip git
 sudo apt -y install python-is-python3
-sudo apt -y install vlc
-pip install matplotlib tmux transitions scikit-learn opencv-python
+sudo apt -y install vlc tmux
+pip install matplotlib transitions scikit-learn opencv-python
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt -y/sources.list.d/ros-latest.list'
 sudo apt -y install curl
