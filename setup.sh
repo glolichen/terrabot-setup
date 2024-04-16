@@ -16,6 +16,7 @@ pip install matplotlib transitions scikit-learn opencv-python
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt -y/sources.list.d/ros-latest.list'
 sudo apt -y install curl
+sudo apt -y update
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 sudo apt -y install build-essential arduino arduino-mk
 sudo apt -y install ros-noetic-rosserial ros-noetic-rosserial-arduino
