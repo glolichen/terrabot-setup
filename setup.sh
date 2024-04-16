@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt -y install dphys-swapfile`
+sudo apt -y install dphys-swapfile
 sudo echo "CONF_SWAPFILE=/var/swap" | /etc/dphys-swapfile
 sudo dphys-swapfile setup
 sudo dphys-swapfile swapon
