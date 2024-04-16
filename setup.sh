@@ -20,14 +20,17 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 sudo apt -y install build-essential arduino arduino-mk
 sudo apt -y install ros-noetic-rosserial ros-noetic-rosserial-arduino
 echo "source /opt/ros/noetic/setup.bash" | ~/.bashrc
+source ~/.bashrc
 
-cd Desktop
+mkdir Desktop/
+cd Desktop/
 git clone https://github.com/reidgs/TerraBot
 cd $HOME
 ln -s Desktop/TerraBot .
 echo "source /opt/ros/noetic/setup.bash" | ~/.bashrc
 echo "export TB_DIR=${HOME}/Desktop/TerraBot" | ~/.bashrc
 echo "export export PYTHONPATH=${PYTHONPATH}:${TB_DIR}:${TB_DIR}/lib/:${TB_DIR}:${TB_DIR}/agents/" | ~/.bashrc
+source ~/.bashrc
 
 ln -s Desktop/TerraBot .
 mkdir ~/Arduino
@@ -40,7 +43,10 @@ git clone https://github.com/RobTillaart/TCA9548
 git clone https://github.com/RobTillaart/dhtnew
 sudo usermod -a -G dialout,robotanist $USER
 sudo usermod -a -G dialout robotanist
+
+curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/arduino-cli/bin/ sh
 echo "export PATH=$PATH:/home/robotanist:/home/robotanist/.local/bin/:/root/.local/bin/:/home/robotanist/arduino-cli/bin/" | ~/.bashrc
+source ~/.bashrc
 
 arduino-cli config init
 arduino-cli core update-index
