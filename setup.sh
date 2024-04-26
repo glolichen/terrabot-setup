@@ -52,7 +52,7 @@ curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.
 echo "export PATH=$PATH:/home/robotanist:/home/robotanist/.local/bin/:/root/.local/bin/:/home/robotanist/arduino-cli/bin/" >> ~/.bashrc
 source ~/.bashrc
 
-cd Desktop/TerraBot/libraries/
+cd Desktop/TerraBot/lib/
 arduino-cli config init
 arduino-cli core update-index
 arduino-cli core install arduino:avr
