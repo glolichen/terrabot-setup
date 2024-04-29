@@ -9,9 +9,7 @@ sudo systemctl start ssh
 
 sudo apt -y update
 sudo apt -y upgrade
-sudo apt -y install python3 python3-pip git
-sudo apt -y install python-is-python3
-sudo apt -y install vlc tmux
+sudo apt -y install python3 python3-pip git python-is-python3 tmux
 pip install matplotlib transitions scikit-learn opencv-python
 
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -30,7 +28,7 @@ cd $HOME
 ln -s Desktop/TerraBot .
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 echo "export TB_DIR=${HOME}/Desktop/TerraBot" >> ~/.bashrc
-echo "export export PYTHONPATH=${PYTHONPATH}:${TB_DIR}:${TB_DIR}/lib/:${TB_DIR}:${TB_DIR}/agents/" >> ~/.bashrc
+echo "export PYTHONPATH=${PYTHONPATH}:${TB_DIR}:${TB_DIR}/lib/:${TB_DIR}:${TB_DIR}/agents/" >> ~/.bashrc
 source ~/.bashrc
 
 ln -s Desktop/TerraBot .
