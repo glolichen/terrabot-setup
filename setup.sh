@@ -34,6 +34,7 @@ ln -s Desktop/TerraBot .
 mkdir ~/Arduino
 mkdir ~/Arduino/libraries
 cd ~/Arduino/libraries
+source /opt/ros/noetic/setup.bash
 rosrun rosserial_arduino make_libraries.py .
 git clone https://github.com/RobTillaart/DHT20
 git clone https://github.com/RobTillaart/HX711
@@ -47,14 +48,14 @@ mkdir arduino-cli/
 mkdir arduino-cli/bin/
 curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | BINDIR=~/arduino-cli/bin/ sh
 echo "export PATH=$PATH:/home/robotanist:/home/robotanist/.local/bin/:/root/.local/bin/:/home/robotanist/arduino-cli/bin/" >> ~/.bashrc
-source ~/.bashrc
+export PATH=$PATH:/home/robotanist:/home/robotanist/.local/bin/:/root/.local/bin/:/home/robotanist/arduino-cli/bin/
 
 cd Desktop/TerraBot/lib/ArduinoCode/
-arduino-cli config init
-arduino-cli core update-index
-arduino-cli core install arduino:avr
-arduino-cli compile --fqbn arduino:avr:mega ArduinoCode.ino
-arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:mega ArduinoCode.ino
+/home/robotanist/arduino-cli/bin/arduino-cli config init
+/home/robotanist/arduino-cli/bin/arduino-cli core update-index
+/home/robotanist/arduino-cli/bin/arduino-cli core install arduino:avr
+/home/robotanist/arduino-cli/bin/arduino-cli compile --fqbn arduino:avr:mega ArduinoCode.ino
+/home/robotanist/arduino-cli/bin/arduino-cli upload -p /dev/ttyACM0 --fqbn arduino:avr:mega ArduinoCode.ino
 
 pip install ortools
 
