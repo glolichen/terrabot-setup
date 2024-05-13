@@ -23,7 +23,7 @@ source ~/.bashrc
 
 mkdir Desktop/
 cd Desktop/
-git clone https://github.com/reidgs/TerraBot
+git clone https://github.com/glolichen/TerraBot
 cd $HOME
 ln -s Desktop/TerraBot .
 echo "export TB_DIR=\$HOME/Desktop/TerraBot" >> ~/.bashrc
