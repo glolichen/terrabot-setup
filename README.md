@@ -1,6 +1,14 @@
 # TerraBot Setup
 For the Peddie School of Excellence
 
+## Flash
+1. Download Raspberry Pi Imager
+2. Insert the SD card into your computer
+3. Ask Ms Wolfe about your Raspberry Pi model. It is probably the 3B+. Choose the correct Raspberry Pi Device
+4. Choose the Operating System: select "Other general-purpose OS" then "Ubuntu" then scroll down and choose "Ubuntu Server 20.04.5 LTS (64 bit)"
+5. Choose the correct storage device
+6. Flash
+
 ## Setup
 1. Use `sudo visudo` to add `Defaults    timestamp_timeout=300` to sudoers file
 2. `wget https://raw.githubusercontent.com/glolichen/terrabot-setup/main/setup.sh` to `/home/robotanist`
