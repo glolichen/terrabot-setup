@@ -33,10 +33,11 @@ For the Peddie School of Excellence
 7. `sudo mount /dev/sda1 /media/usb/` (the usb may not actually be `/dev/sda1`, use `cfdisk` to check)
 8. `sudo cp ~/.ssh/id_rsa.pub /media/usb/`
 9. `sudo umount /media/usb/`
-10. Remove the USB and give the USB to Jayden Li
-11. On his computer, Jayden Li will copy the contents of `id_rsa.pub`, open [https://github.com/settings/keys](https://github.com/settings/keys), click New SSH Key, Paste, then press Add SSH Key
-12. You are now authenticated to push code to his account.
+10. Remove the USB and plug it into your computer
+11. On your computer, copy the contents of `id_rsa.pub`, open [https://github.com/settings/keys](https://github.com/settings/keys), click New SSH Key, Paste, then press Add SSH Key
+12. You are now authenticated to push code to your account.
 13. On the TerraBot, `ssh -T git@github.com` to make sure it works
 14. Navigate to the TerraBot directory
-15. `git remote set-url origin git@github.com:glolichen/TerraBot.git`
-16. You can now push
+15. Before you proceed, fork [glolichen/Terrabot](https://github.com/glolichen/Terrabot), while keeping the repository name the same.
+16. `git remote set-url origin git@github.com:[YOUR GITHUB USERNAME]/TerraBot.git`
+17. You can now push
